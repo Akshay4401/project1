@@ -12,15 +12,16 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.Test;
 
-public class order_details {
+public class order_details extends genralcode{
+	WebDriver driver;
 	
     @Test()
     public void Order() throws InterruptedException
     {
-        System.setProperty("webdriver.chrome.driver","C:\\Users\\akshay.dm\\Downloads\\chromedriver_win32\\chromedriver.exe");
+       /* System.setProperty("webdriver.chrome.driver","C:\\Users\\akshay.dm\\Downloads\\chromedriver_win32\\chromedriver.exe");
         WebDriver driver=new ChromeDriver();
         driver.get("https://mobileworld.azurewebsites.net");
-        driver.manage().window().maximize();
+        driver.manage().window().maximize();*/
         //AllMobiles
         driver.findElement(By.xpath("//a[@href='mobile.html']")).click();
         Thread.sleep(1000);
@@ -59,7 +60,7 @@ public class order_details {
         driver.findElement(By.xpath("//button[@class='btn btn-primary']")).click();
         Thread.sleep(2000);
         driver.findElement(By.xpath("//a[@class='btn btn-secondary']")).click();
-        driver.quit();
+       // driver.quit();
     }
 
 }
