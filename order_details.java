@@ -10,19 +10,21 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-public class order_details extends genralcode{
-	WebDriver driver;
+public class order_details{
 	
-    @Test()
+	
+    @Test(priority=2)
     public void Order() throws InterruptedException
     {
-       /* System.setProperty("webdriver.chrome.driver","C:\\Users\\akshay.dm\\Downloads\\chromedriver_win32\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver","C:\\Users\\akshay.dm\\Downloads\\chromedriver_win32\\chromedriver.exe");
         WebDriver driver=new ChromeDriver();
         driver.get("https://mobileworld.azurewebsites.net");
-        driver.manage().window().maximize();*/
-        //AllMobiles
+        driver.manage().window().maximize();
+      //AllMobiles
         driver.findElement(By.xpath("//a[@href='mobile.html']")).click();
         Thread.sleep(1000);
         JavascriptExecutor js=(JavascriptExecutor) driver;
@@ -60,7 +62,7 @@ public class order_details extends genralcode{
         driver.findElement(By.xpath("//button[@class='btn btn-primary']")).click();
         Thread.sleep(2000);
         driver.findElement(By.xpath("//a[@class='btn btn-secondary']")).click();
-       // driver.quit();
+       driver.quit();
     }
 
 }
