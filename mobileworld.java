@@ -5,16 +5,17 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
 
-public class mobileworld {
-    @Test
-    public void sign() throws InterruptedException
+public class mobileworld extends genralcode{
+	WebDriver driver;
+    @Test(priority=1)
+    public void sign()  throws InterruptedException 
 
 {
 
-	System.setProperty("webdriver.chrome.driver","C:\\Users\\akshay.dm\\Downloads\\chromedriver_win32\\chromedriver.exe");
+	/*System.setProperty("webdriver.chrome.driver","C:\\Users\\akshay.dm\\Downloads\\chromedriver_win32\\chromedriver.exe");
 	WebDriver driver=new ChromeDriver();
 	driver.get("https://mobileworld.azurewebsites.net/");
-	driver.manage().window().maximize();
+	driver.manage().window().maximize();*/
 	driver.findElement(By.xpath("//button[@class='btn btn-warning my-2 my-sm-0']")).click();
 	driver.findElement(By.xpath("//a[@href='signup.html']")).click();
 	driver.findElement(By.xpath("//input[@placeholder='First Name']")).sendKeys("Akshay");
@@ -34,7 +35,7 @@ public class mobileworld {
 	driver.findElement(By.id("username")).sendKeys("Akshay");
 	driver.findElement(By.id("password")).sendKeys("Akshay@123");
 	driver.findElement(By.xpath("//a[@class='btn btn-primary btn-block']")).click();
-	driver.quit();
+	//driver.quit();
 }    
 
 
