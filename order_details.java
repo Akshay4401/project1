@@ -60,7 +60,6 @@ public class order_details {
         Thread.sleep(2000);
         driver.findElement(By.xpath("//a[@class='btn btn-secondary']")).click();
         driver.quit();
-
     }
 
 }
