@@ -8,14 +8,15 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
 
-public class contact_us {
-    @Test(priority=1)
+public class contact_us extends genralcode{
+	
+    @Test
     public void contact() throws InterruptedException
     {
-        System.setProperty("webdriver.chrome.driver","C:\\Users\\akshay.dm\\Downloads\\chromedriver_win32\\chromedriver.exe");
+       /* System.setProperty("webdriver.chrome.driver","C:\\Users\\akshay.dm\\Downloads\\chromedriver_win32\\chromedriver.exe");
         WebDriver driver=new ChromeDriver();
-        driver.get("https://mobileworld.azurewebsites.net");
-        driver.findElement(By.xpath("(//a[@id='navbarDropdown'])")).click();
+        driver.get("https://mobileworld.azurewebsites.net");*/
+        driver.findElement(By.xpath("//div/ul/li[4]/a")).click();
         driver.findElement(By.linkText("Contact Us")).click();
         Set<String> windows = driver.getWindowHandles();
         Iterator<String> it = windows.iterator();
